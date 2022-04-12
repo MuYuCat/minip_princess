@@ -57,6 +57,19 @@
         {
           "name": "pages/updateRecordSuccess/index",
           "pathName": "pages/updateRecordSuccess/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addMission/index",
+          "pathName": "pages/addMission/index",
+          "query": "envId=princess-6gof7wgrd0fb9363",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
           "scene": null
         }
       ]

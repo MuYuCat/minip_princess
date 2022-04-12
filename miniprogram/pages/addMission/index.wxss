@@ -2,50 +2,59 @@
 margin-top: 30px;
 }
 
-.weui-cells__title{
-    margin-top: 0.77em;
-    margin-bottom: 0.3em;
-    padding-left: 15px;
-    padding-right: 15px;
-    color: #999999;
-    font-size: 14px;
-}
-
-.weui-cell{
-  position: relative;
-  margin-bottom: 1.17647059em;
-  background-color: #FFFFFF;
-  line-height: 1.41176471;
-  font-size: 17px;
-  padding: 10px 15px;
+.page-section {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content:left;
   align-items: center;
-  border-top: 1px solid #D9D9D9;
-  border-bottom: 1px solid #D9D9D9;
+  margin-left: 50rpx;
+  margin-bottom: 50rpx;
 }
 
-.code_img {
-  width: 300rpx;
-  height: 300rpx;
+.weui-cells__title{
+  margin-top: 0.77em;
+  margin-bottom: 0.3em;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #999999;
+  font-size: 14px;
+  display: inline;
+  margin-right: 20rpx;
 }
 
-.box_text {
-  background-color: white;
-  text-align: center;
-  padding: 100rpx 0;
-  margin-top: 30rpx;
-  color: rgba(0, 0, 0, 0.5);
+.weui-input {
+  display: inline;
+  width: 400rpx;
+  height: 100rpx;
+  border-radius: 40rpx;
 }
 
-.code_box {
-  text-align: center;
-  background-color: white;
-  margin-top: 30rpx;
-  padding: 50rpx 0 17px 0;
+.weui-input:hover{
+  border: 2px solid #0288D1;
+}
+
+.img_info_detail {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content:left;
+  align-items: center;
+}
+
+.btn-area {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: space-around;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 50rpx;
 }
 
 .button {
-  width: 300rpx;
   text-align: center;
   margin: 20px auto 0 auto;
   height: 80rpx;
@@ -56,7 +65,7 @@ margin-top: 30px;
 }
 
 .button_clear {
-  width: 300rpx;
+  width: 80rpx;
   text-align: center;
   margin: 20px auto 0 auto;
   height: 80rpx;
@@ -66,30 +75,11 @@ margin-top: 30px;
   background-color: rgba(0, 0, 0, 0.03);
 }
 
-.img_info {
-  padding-top: 16px;
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  padding: 16rpx 0;
-  border-top: 0.5px solid #E5E5E5;
-  margin-top: 50rpx;
-}
+.bnt_primary {
+  width: 250rpx !important;
+} 
 
-.img_info_title {
-  font-size: 14;
-  font-family: PingFang SC;
-  font-weight: 400;
-  color: #888888;
-  width: 72px;
-  margin-right: 32px;
-}
-
-.img_info_detail {
-  text-align: left;
-  font-size: 14;
-  font-family: PingFang SC;
-  font-weight: 400;
-  color: #000000;
-  width: 500rpx;
+.bnt_reset{
+  width: 250rpx !important;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }

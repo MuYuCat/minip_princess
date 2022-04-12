@@ -7,13 +7,22 @@
   top: 0;
   left: 0;
 }
-.bg-image{
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-  width: 100%;
-  opacity: 0.6
+
+.gold_medal {
+  margin-top: 20rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.integral {
+  height: 30rpx;
+  line-height: 30rpx;
+  padding-top: 15rpx;
+}
+.userIntegral {
+  margin-left: 10rpx;
+  display: inline;
+  font-weight: 500;
 }
 
 page {
@@ -43,6 +52,7 @@ page {
   border-radius: 5px;
   width: 93%;
   padding-bottom: 1rpx;
+  overflow-y: auto;
 }
 
 .power_info {
@@ -82,6 +92,7 @@ page {
 
 .power_item_show {
   margin-bottom: 20rpx;
+  border-radius: 40rpx;
 }
 
 .power_item {

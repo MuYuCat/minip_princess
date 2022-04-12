@@ -1,7 +1,12 @@
 <!--index.wxml-->
 <view class="container">
-  <!-- <image class="bg-image" mode="widthFix" src="./IMG_1255.png"></image> -->
-  <view class="integral" wx:if="{{userName}}">{{userName}}的积分:{{userIntegral || 0}}</view>
+  <image class="gold_medal" src="../../images/icons/goldMedal.png" wx:if="{{userIntegral >= 10000}}"></image>
+  <image class="gold_medal" src="../../images/icons/silverMedal.png" wx:if="{{userIntegral >= 5000}}"></image>
+  <image class="gold_medal" src="../../images/icons/bronzeMedal.png" wx:if="{{userIntegral >= 1000}}"></image>
+  <view class="integral" wx:if="{{userName}}">
+    {{userName}}的积分:
+    <view class='userIntegral'>{{userIntegral || 0}}</view>
+  </view>
 
   <view class="power" wx:key="title" wx:for="{{powerList}}" wx:for-item="power">
     <view class="item_color" wx:if="{{power.showItem}}">
