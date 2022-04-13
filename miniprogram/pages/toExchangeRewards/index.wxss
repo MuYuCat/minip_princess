@@ -1,3 +1,10 @@
+.record_image {
+  width: 400rpx;
+  height: 400rpx;
+  margin-top: 300rpx;
+  margin-left: 80rpx;
+}
+
 .tip {
   font-size: 23rpx;
   color: rgba(0, 0, 0, 0.5);
@@ -25,9 +32,9 @@
 
 .code_box {
   text-align: center;
-  background-color: white;
   margin-top: 30rpx;
   padding-top: 17rpx;
+  margin-bottom: 80rpx;
 }
 
 .code_box_title {
@@ -38,23 +45,12 @@
 }
 
 .code_box_record {
-  display: flex;
-}
-
-.code_box_record_content{
-  height: 70px;
-}
-
-.image {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-}
-
-.code_box_record_title {
-  font-size: 26rpx;
-  color: rgba(0, 0, 0, 0.5);
-  padding: 20rpx 0;
+  width: 80%;
+  height: 200rpx;
+  margin-left: 8%;
+  margin-bottom: 20rpx;
+  border-radius: 40rpx;
+  background-color:bisque;
 }
 
 .code_box_record_title_content {
@@ -69,14 +65,6 @@
   width: 30%;
 }
 
-.code_box_record_detail {
-  width: 50%;
-  font-size: 26rpx;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .code_box_record_detail_mission {
   color: #07c160;
 }
@@ -86,19 +74,22 @@
 }
 
 .code_box_record_detail_content {
-  width: 50%;
+  margin-left: 200rpx;
+  display: inline-block;
 }
 
 .code_box_record_detail_number {
-  width: 20%;
+  margin-left: 200rpx;
+  display: inline-block;
 }
 
 .code_box_record_detail_time {
-  width: 30%;
+  margin-left: 200rpx;
+  display: inline-block;
 }
 
 .button {
-  width: 100rpx;
+  width: 120rpx;
   text-align: center;
   margin: 0 auto 0 auto;
   height: 50rpx;
@@ -106,6 +97,11 @@
   border-radius: 5px;
   line-height: 50rpx;
   background-color: #07c160;
+}
+
+.button_disabled {
+  /* color: #555555; */
+  background-color: #c7cac8;
 }
 
 .button_clear {
@@ -124,3 +120,29 @@
   width: 100%;
   background-color: rgba(0, 0, 0, 0.1);
 }
+
+.image_show {
+  position: absolute;
+  width: 130rpx;
+  height: 130rpx;
+  margin-left: 30rpx;
+}
+
+.item_show {
+  display: inline;
+  font-weight: 500;
+  margin-left: 20rpx;
+}
+
+.show_box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  height: 100%;
+  background-color: #f7d794;
+  margin-bottom: 20rpx;
+  border-radius: 40rpx;
+} 

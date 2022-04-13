@@ -35,6 +35,9 @@
   color: white;
   border-radius: 5px;
   background-color: #07c160;
+  width: 400rpx !important;
+  margin-top: 50rpx;
+  margin-bottom: 80rpx;
 }
 
 .code_box_title {
@@ -65,11 +68,11 @@
 }
 
 .code_box_record_title_content {
-  width: 50%;
+  width: 40%;
 }
 
 .code_box_record_title_number {
-  width: 20%;
+  width: 30%;
 }
 
 .code_box_record_title_time {
@@ -93,11 +96,11 @@
 }
 
 .code_box_record_detail_content {
-  width: 50%;
+  width: 40%;
 }
 
 .code_box_record_detail_number {
-  width: 20%;
+  width: 30%;
 }
 
 .code_box_record_detail_time {

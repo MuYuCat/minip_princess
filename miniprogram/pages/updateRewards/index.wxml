@@ -19,6 +19,6 @@
       </view>
     </view>
   </view>
-  <button class="add_button" wx:if="{{record}}" id="{{item._id}}" style="margin: 50rpx 0; width: 100%" type="primary" bindtap="toAddRewards">新增奖励</button>
+  <button class="add_button" wx:if="{{record}}" id="{{item._id}}" type="primary" bindtap="toAddRewards">新增奖励</button>
   <cloud-tip-modal showUploadTipProps="{{showUploadTip}}"></cloud-tip-modal>
 </view>

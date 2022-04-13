@@ -69,7 +69,19 @@
         {
           "name": "pages/index/index",
           "pathName": "pages/index/index",
-          "query": "",
+          "query": "envId=princess-6gof7wgrd0fb9363",
+          "scene": null
+        },
+        {
+          "name": "pages/toCompleteMission/index",
+          "pathName": "pages/toCompleteMission/index",
+          "query": "envId=princess-6gof7wgrd0fb9363",
+          "scene": null
+        },
+        {
+          "name": "pages/toExchangeRewards/index",
+          "pathName": "pages/toExchangeRewards/index",
+          "query": "envId=princess-6gof7wgrd0fb9363",
           "scene": null
         }
       ]

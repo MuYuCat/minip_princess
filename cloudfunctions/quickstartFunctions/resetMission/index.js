@@ -10,5 +10,10 @@ exports.main = async (event, context) => {
   // 返回数据库查询结果
   return await db.collection('mission').where({
     is_finished: true
-  }).update({data:{is_finished: false}});
+  }).update({
+    data:{
+      is_finished: false,
+      finish_time: ''
+    }
+  });
 };

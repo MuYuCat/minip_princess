@@ -10,5 +10,11 @@ exports.main = async (event, context) => {
   const data = event.data
   // 返回数据库查询结果
   const user = await db.collection('user').where({user_name: '佳佳'}).get();
-  return await db.collection('user').where({user_name: '佳佳'}).update({data:{user_integral: user.data[0].user_integral + data.integral}})
+  return await db.collection('user').where({
+    user_name: '佳佳'
+  }).update({
+    data:{
+      user_integral: user.data[0].user_integral + data.integral,
+    }
+  })
 };

@@ -30,8 +30,13 @@
     height: 100rpx;
     border-radius: 40rpx;
   }
+
+  .weui-input_border {
+    border-radius: 40rpx;
+    padding: 20rpx;
+  }
   
-  .weui-input:hover{
+  .weui-input_border:hover{
     border: 2px solid #0288D1;
   }
   
@@ -83,4 +88,3 @@
     width: 250rpx !important;
     border: 1px solid rgba(0, 0, 0, 0.2);
   }
-  

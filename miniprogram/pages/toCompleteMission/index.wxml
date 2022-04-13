@@ -1,31 +1,25 @@
 <view>
-  <view  wx:if="{{record}}" class="code_box">
-    <view class="code_box_record">
-      <view class="code_box_record_title code_box_record_title_content">任务内容</view>
-      <view class="code_box_record_title code_box_record_title_number">价值积分</view>
-      <view class="code_box_record_title code_box_record_title_time">操作</view>
-    </view>
-    <view class="line"></view>
-    <view class="code_box_record code_box_record_content" wx:for="{{record}}" wx:key="_id">
-      <view class="code_box_record_detail code_box_record_detail_content">
-        <image wx:if="{{item.mission_image}}"  class="image" mode="scaleToFill" src="{{item.mission_image}}"></image>
-        {{item.mission_content}}
-      </view>
-      <view class="code_box_record_detail code_box_record_detail_number">
-        {{item.mission_integral}}
-      </view>
-      <view class="code_box_record_detail code_box_record_detail_time">
-        <view 
-          id="{{item._id}}" 
-          class="button {{item.is_finished && 'button_disabled'}}" 
-          bindtap="{{item.is_finished ? '()=>{}' : 'showMissionModal'}}"
-        >
-          {{item.is_finished ? '已完成' : '完成'}}
+  <view wx:if="{{record.length === 0}}" class="record_image">
+    <image src="../../images/icons/empty.png"></image>
+  </view>
+  <view  wx:if="{{record.length !== 0}}" class="code_box">
+    <view class="code_box_record" wx:for="{{record}}" wx:key="_id">
+      <view id="{{item._id}}" class="{{item.is_finished ? 'show_box finish' : 'show_box wait'}}" bindtap="{{item.is_finished ? '()=>{}' : 'showMissionModal'}}">
+        <image  class="image_show" src="{{item.is_finished ? '../../images/icons/finish.png' : '../../images/icons/finish_no.png'}}"></image>
+        <view class="code_box_record_detail_content">
+        任务名称:
+        <view class="item_show">
+          {{item.mission_content}}
+        </view>
+        </view>
+        <view class="code_box_record_detail_number">
+        任务积分:
+        <view class="item_show">
+          {{item.mission_integral}}
+        </view>
         </view>
       </view>
     </view>
   </view>
-  <!-- <view class="button" bindtap="getRecord" wx:if="{{!haveGetRecord}}">查询记录</view>
-  <view class="button_clear" bindtap="clearRecord" wx:if="{{haveGetRecord}}">清空</view> -->
   <cloud-tip-modal showUploadTipProps="{{showUploadTip}}"></cloud-tip-modal>
 </view>

@@ -46,7 +46,8 @@ Page({
   },
 
   onLoad(){
-    this.resetMission()
+    this.resetMission();
+    
   },
 
   onShow(){
@@ -169,10 +170,7 @@ Page({
           return false
         })
         const currentDate = new Date().getDate();
-        console.log('lastMissionDate', lastMissionDate)
-        console.log('currentDate', currentDate)
         if (lastMissionDate !== currentDate){
-          console.log('resetMission')
           wx.cloud.callFunction({
             name: 'quickstartFunctions',
             config: {

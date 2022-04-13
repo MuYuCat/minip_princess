@@ -3,11 +3,15 @@
     <form catchsubmit="formSubmit" catchreset="formReset">
       <view class="page-section">
         <view class="weui-cells__title">奖励内容:</view>
-        <input name="goods_content" class="weui-input" placeholder="请输入奖励名称" />
+        <view class="weui-input_border">
+          <input name="goods_content" class="weui-input" placeholder="请输入奖励名称" />
+        </view>
       </view>
       <view class="page-section">
         <view class="weui-cells__title">奖励积分:</view>
-        <input name="goods_integral" class="weui-input" type="number" placeholder="请输入所需积分"/>
+        <view class="weui-input_border">
+          <input name="goods_integral" class="weui-input" type="number" placeholder="请输入所需积分"/>
+        </view>
       </view>
       <view class="btn-area">
         <button class="bnt_primary" type="primary" formType="submit">确认</button>

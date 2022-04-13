@@ -22,11 +22,12 @@ Page({
   },
 
   showMissionModal(event){
-    const missionId = event.target.id;
+    const missionId = event.currentTarget.id;
     const data = this.data.record.find(item => {
       return item._id === missionId
     })
     const completeMission = this.completeMission
+    console.log('mission', event, data, completeMission);
     wx.showModal({
       title: '请确认',
       content: '完成 '+data.mission_content,
@@ -95,7 +96,7 @@ Page({
     wx.showLoading({
       title: '',
     });
-   wx.cloud.callFunction({
+    wx.cloud.callFunction({
       name: 'quickstartFunctions',
       config: {
         env: this.data.envId
@@ -104,6 +105,25 @@ Page({
         type: 'selectMission'
       }
     }).then((resp) => {
+      let nowTime = new Date();
+      let nowYear = nowTime.getFullYear();
+      let nowMonth = nowTime.getMonth() + 1;
+      let nowDay = nowTime.getDate();
+      let nowHour = nowTime.getHours();
+      let nowMin = nowTime.getMinutes();
+      let nowSec = nowTime.getSeconds();
+      const finTime = `${nowYear}-${nowMonth}-${nowDay} ${nowHour}:${nowMin}:${nowSec}`;
+      resp.result.data.map((item)=>{
+        if(item.is_finished && item.finish_time) {
+          const pastTime = item.finish_time;
+          const pastDay = pastTime.split(' ')[0].split('-');
+          if ((+pastDay[0]< nowYear) || 
+          (+pastDay[0] === nowYear && +pastDay[1]< nowMonth) || 
+          (+pastDay[0] === nowYear && +pastDay[1] === nowMonth && pastDay[2]< nowDay)) {
+            this.resetMission();
+          }
+        }
+      })
       this.setData({
         haveGetRecord: true,
         record: resp.result.data
@@ -116,6 +136,21 @@ Page({
       });
      wx.hideLoading();
    });
+  },
+
+  resetMission() {
+    wx.showLoading();
+    wx.cloud.callFunction({
+      name: 'quickstartFunctions',
+      config: {
+        env: this.data.envId
+      },
+      data: {
+        type: 'resetMission'
+      }
+    });
+    this.getRecord();
+    wx.hideLoading();
   },
 
   clearRecord() {
