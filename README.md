@@ -1,5 +1,5 @@
 # 微信小程序/ 积分兑换奖励
-### 参考大佬的设计  LCM9902/Duck-Princess-Cultivation-Plan
+### 参考大佬的设计  https://github.com/LCM9902/Duck-Princess-Cultivation-Plan
 ### 大佬的数据库设计
 https://bytedance.feishu.cn/docx/doxcnvk58QcRZxmOmHgogANvnQu
 
