@@ -1,3 +1,6 @@
+> 小程序已经更新，该版本已废弃，最新版本请移步https://github.com/MuYuCat/minip
+
+
 # 微信小程序/ 积分兑换奖励
 ### 参考大佬的设计  https://github.com/LCM9902/Duck-Princess-Cultivation-Plan
 ### 大佬的数据库设计
