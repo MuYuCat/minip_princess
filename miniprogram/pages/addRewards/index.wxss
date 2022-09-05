@@ -1,0 +1,90 @@
+.page-body{
+  margin-top: 30px;
+  }
+  
+  .page-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content:left;
+    align-items: center;
+    margin-left: 50rpx;
+    margin-bottom: 50rpx;
+  }
+  
+  .weui-cells__title{
+    margin-top: 0.77em;
+    margin-bottom: 0.3em;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #999999;
+    font-size: 14px;
+    display: inline;
+    margin-right: 20rpx;
+  }
+  
+  .weui-input {
+    display: inline;
+    width: 400rpx;
+    height: 100rpx;
+    border-radius: 40rpx;
+  }
+
+  .weui-input_border {
+    border-radius: 40rpx;
+    padding: 20rpx;
+  }
+  
+  .weui-input_border:hover{
+    border: 2px solid #0288D1;
+  }
+  
+  .img_info_detail {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content:left;
+    align-items: center;
+  }
+  
+  .btn-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 50rpx;
+  }
+  
+  .button {
+    text-align: center;
+    margin: 20px auto 0 auto;
+    height: 80rpx;
+    color: white;
+    border-radius: 5px;
+    line-height: 80rpx;
+    background-color: #07c160;
+  }
+  
+  .button_clear {
+    width: 80rpx;
+    text-align: center;
+    margin: 20px auto 0 auto;
+    height: 80rpx;
+    color: #07c160;
+    border-radius: 5px;
+    line-height: 80rpx;
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+  
+  .bnt_primary {
+    width: 250rpx !important;
+  } 
+  
+  .bnt_reset{
+    width: 250rpx !important;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }

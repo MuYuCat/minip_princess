@@ -1,0 +1,26 @@
+<view>
+  <view wx:if="{{record.length === 0}}" class="record_image">
+    <image src="../../images/icons/empty.png"></image>
+  </view>
+  <view  wx:if="{{record.length !== 0}}" class="code_box">
+    <view class="code_box_record" wx:for="{{record}}" wx:key="_id">
+      <view id="{{item._id}}" class="show_box" bindtap="showMissionModal">
+        <image  class="image_show" src="../../images/icons/rewards_true.png"></image>
+        <view class="code_box_record_detail_content">
+          奖励内容:
+        <view class="item_show">
+          {{item.goods_content}}
+        </view>
+        </view>
+        <view class="code_box_record_detail_number">
+          所需积分:
+        <view class="item_show">
+          {{item.goods_integral}}
+        </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <cloud-tip-modal showUploadTipProps="{{showUploadTip}}"></cloud-tip-modal>
+</view>
+
